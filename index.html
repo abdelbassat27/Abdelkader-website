@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الأستاذ عبد القادر - جامعة وهران 2 محمد بن أحمد</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #003d80;
+            color: white;
+        }
+        a {
+            color: #0056b3;
+        }
+        a:hover {
+            color: #002f5d;
+        }
+        .burger-menu {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: block;
+                cursor: pointer;
+            }
+            #nav-links {
+                display: none;
+                flex-direction: column;
+            }
+            #nav-links.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <h1>الأستاذ عبد القادر</h1>
+                <p>أستاذ محاضر قسم ب - جامعة وهران 2 محمد بن أحمد</p>
+            </div>
+            <nav>
+                <ul id="nav-links" class="d-flex list-unstyled">
+                    <li class="mx-2"><a href="#about" class="text-white text-decoration-none">عن الأستاذ</a></li>
+                    <li class="mx-2"><a href="#articles" class="text-white text-decoration-none">المقالات</a></li>
+                    <li class="mx-2"><a href="#interventions" class="text-white text-decoration-none">المداخلات</a></li>
+                    <li class="mx-2"><a href="#cv" class="text-white text-decoration-none">السيرة الذاتية</a></li>
+                </ul>
+                <div class="burger-menu text-white" onclick="toggleMenu()">
+                    <span>&#9776;</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>مرحبًا بكم في موقع الأستاذ عبد القادر</h2>
+        <p>موقع مخصص للمقالات والمداخلات الأكاديمية</p>
+    </section>
+
+    <section id="about" class="container py-5">
+        <h2 class="text-center mb-4">عن الأستاذ عبد القادر</h2>
+        <p>أستاذ محاضر قسم ب في جامعة وهران 2 محمد بن أحمد، متخصص في [التخصص الأكاديمي] ويشارك في العديد من الأنشطة البحثية والتعليمية.</p>
+        <div class="text-center">
+            <img src="" alt="صورة الأستاذ عبد القادر" class="img-fluid rounded-circle">
+        </div>
+    </section>
+
+    <section id="articles" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">المقالات</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/399/8/1/253927" target="_blank">طرق الطعن على ضوء اتفاقية روما</a></li>
+                <li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/268/5/1/48658" target="_blank">الوساطة الجزائية آلية تصالحية بين إرادة المشرع وعزوف الضحية أو المشتكى منه -مجلس قضاء مستغانم أنموذجا</a></li>
+                <!-- باقي المقالات -->
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/270/14/3/110771" target="_blank">تعدد سبل الإحالة أمام المحكمة الجنائية الدولية والعقبات التي تعترضها</a></li>
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/325/8/1/102044" target="_blank">التعويض عن الخطأ القضائي على ضوء اتفاقية روما</a></li>
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/457/4/2/107116" target="_blank">Aspects Of Legal And Practical ShortComings In The Election Of Judges Of The International Criminal Court.</a></li>
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/120/13/2/151492" target="_blank">The role of civil society organizations in evaluating and estimation educational and training curricula as a mean of promoting human rights.</a></li>
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/535/8/2/240207" target="_blank">المحامي المعتمد لدى المحكمة الجنائية الدولية ودوره في إرساء العدالة الجنائية الدولية.</a></li>
+				<li class="list-group-item"><a href="https://asjp.cerist.dz/en/downArticle/526/9/1/245725" target="_blank">قصور القضاء الدولي في مساءلة الكيان الإسرائيلي ومجرميه على جريمة الإبادة الجماعية المرتكبة في قطاع غزة.</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="interventions" class="container py-5">
+        <h2 class="text-center mb-4">المداخلات</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th>الرقم</th>
+                        <th>عنوان المداخلة</th>
+                        <th>نوع وعنوان الملتقى</th>
+                        <th>تاريخ انعقاده</th>
+                        <th>مكان انعقاد الملتقى</th>
+                        <th>الرابط</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>المنظمات غير الحكومية آلية لمكافحة الإفلات من العقاب</td>
+                        <td>ملتقى الدولي؛ حقوق الإنسان، المجتمع المدني و الحكم الراشد</td>
+                        <td>المنعقد يوم 19و20 أفريل 2015.</td>
+                        <td>جامعة مستغانم</td>
+                        <td><a href="المنظمات غير الحكومية آلية لمكافحة الإفلات من العقاب.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>سلطة المحكمة الجنائية الدولية في التحقيق والمتابعة ومدى احترامها لحقوق الإنسان.</td>
+                        <td>ملتقى وطني؛التحقيق بين ضرورة الوصول إلى الحقيقة وضمان الحقوق والحريات.</td>
+                        <td>المنعقد يوم 10/12/2015.</td>
+                        <td>جامعة وهران 2 محمد بن أحمد</td>
+                        <td><a href="سلطة المحكمة الجنائية الدولية.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>3</td>
+                        <td>عجز المنظمات الإفريقية عن تحقيق التكامل الاقتصادي </td>
+                        <td>يوم الدراسي؛ فعالية المنظمات الدولية الإقليمية في تحقيق التكامل الاقتصادي على ضوء التجارب الراهنة</td>
+                        <td>المنعقد بتاريخ 12 أفريل 2016.</td>
+                        <td>جامعة سعيدة</td>
+                        <td><a href="عجز المنظمات الإفريقية عن تحقيق التكامل الاقتصادي.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>4</td>
+                        <td>الوساطة الجزائية آلية لتفعيل القواعد الخاصة بالطفل الجانح </td>
+                        <td>الندوة الفكرية؛ الموسومة بحماية حقوق الطفل في القانون رقم15 – 12 المؤرخ في2015 / 07 / 15</td>
+                        <td>المنعقد يوم 10 ماي2016</td>
+                        <td>المركز الجامعي لغيليزان</td>
+                        <td><a href="الوساطة الجزائية آلية لتفعيل القواعد الخاصة بالطفل الجانح.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>5</td>
+                        <td>الصحة المدرسية بين النصوص القانونية والواقع</td>
+                        <td>اليوم الدراسي الافتراضي، حماية الصحة والتنمية المستدامة في الجزائر</td>
+                        <td>المنعقد يوم 16/01/2022</td>
+                        <td>جامعة مستغانم</td>
+                        <td><a href="" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>6</td>
+                        <td>الآثار السلبية لجائحة كورونا كوفيد 19 على التعليم الابتدائي في الجزائر.</td>
+                        <td>اليوم الدراسي الافتراضي؛ الأبعاد الحقوقية والآثار القانونية لجائحة كوفيد 19</td>
+                        <td>المنعقد يوم 22/01/2022</td>
+                        <td>جامعة مستغانم</td>
+                        <td><a href="" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>7</td>
+                        <td>أثار الأزمات العالمية على تمويل المحكمة الجنائية الدولية</td>
+                        <td>الملتقى الوطني الافتراضي ؛عشرينية المحكمة الجنائية الدولية واقع وآفاق</td>
+                        <td>المنعقد يوم 29/05/2022.</td>
+                        <td>جامعة مستغانم</td>
+                        <td><a href="آثار الآزمات المالية العالمية على المحكمة الجنائية الدولية.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>8</td>
+                        <td>مكانة سيادة الدول بين نصوص النظام الأساسي للمحكمة الجنائية الدولية والواقع</td>
+                        <td>مقدمة في الملتقى الوطني الافتراضي الموسوم بالإرهاب الدولي والاختصاص الموضوعي للمحكمة الجنائية الدولية واقع وآفاق- نظرة قانونية استشرافية-،</td>
+                        <td>المنعقد يوم 23/02/2023.</td>
+                        <td>جامعة مستغانم</td>
+                        <td><a href="مكانة سيادة الدول.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>9</td>
+                        <td>حظوظ فلسطين في تجاوز عقبات الملاحقة بين إستراتجية توسيع نطاق المساءلة واستغلال إسرائيل معوقات نظام روما.</td>
+                        <td>ملتقى دولي؛ الولاية القضائية للمحكمة الجنائية الدولية على الأراضي الفلسطينية المحتلة، مسارات المساءلة وعقبات الملاحقة.</td>
+                        <td>المنعقد يوم 25/10/2023</td>
+                        <td>جامعة وهران 2 محمد بن أحمد</td>
+                        <td><a href="" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>10</td>
+                        <td>مآلات القضية الفلسطينية أمام المحكمة الجنائية الدولية في ظل أزمة القانون الدولي الجنائي</td>
+                        <td>ملتقى دولي؛ فعالية قواعد القانون الدولي في ضوء التحولات الدولية المعاصرة</td>
+                        <td>المنعقد يومي: 6-7/11/2023</td>
+                        <td>جامعة الوادي</td>
+                        <td><a href="مآلات القضية الفلسطينية.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>11</td>
+                        <td>قراءة في الجهود الدولية لحماية التراث الثقافي المادي</td>
+                        <td>الملتقى الوطني؛ الحماية القانونية للتراث الثقافي المادي</td>
+                        <td>المنعقد يوم 30/04/2024.</td>
+                        <td>جامعة وهران 2 محمد بن أحمد</td>
+                        <td><a href="قراءة في حماية التراث.pdf" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+					<tr>
+                        <td>12</td>
+                        <td>تعدد سبل ملاحقة الكيان الإسرائيلي على جرائمه المرتكبة في قطاع غزة والعقبات التي تعترضها</td>
+                        <td>ندوة علمية: الكيان المارق والقانون الدولي قراءة في أحداث غزة.</td>
+                        <td>المنعقدة يوم 19 فيفري 2024</td>
+                        <td>جامعة وهران 2 محمد بن أحمد</td>
+                        <td><a href="" target="_blank">رابط المداخلة</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="cv" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">السيرة الذاتية</h2>
+            <p>تصفح السيرة الذاتية للأستاذ عبد القادر للاطلاع على المسار الأكاديمي والمساهمات البحثية.</p>
+            <a href="cv.docx" class="btn btn-primary">تحميل السيرة الذاتية</a>
+        </div>
+    </section>
+
+    <footer class="py-3">
+        <p class="text-center">&copy; 2025 موقع الأستاذ عبد القادر - جامعة وهران 2 محمد بن أحمد</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
