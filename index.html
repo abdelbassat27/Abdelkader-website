@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقع الأستاذ عبد القادر - جامعة وهران 2 محمد بن أحمد</title>
+    <meta name="description" content="الموقع الرسمي للأستاذ عبد القادر، أستاذ محاضر في القانون والدراسات القانونية بجامعة وهران 2 محمد بن أحمد">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -23,12 +24,16 @@
             color: var(--text-color);
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
         }
         
         /* تحسينات عامة */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             color: var(--dark-color);
+            margin-top: 0;
         }
         
         a {
@@ -61,7 +66,7 @@
         }
         
         .section-padding {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         /* تحسين الهيدر */
@@ -114,13 +119,15 @@
             font-size: 1.5rem;
             color: white;
             cursor: pointer;
+            border: none;
+            background: transparent;
         }
         
         /* تحسين الهيرو سيكشن */
         .hero {
             background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3') center/cover no-repeat;
             color: white;
-            padding: 150px 0;
+            padding: 120px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -147,7 +154,7 @@
         }
         
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
             margin-bottom: 20px;
             color: white;
@@ -155,7 +162,7 @@
         }
         
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.95;
         }
@@ -163,7 +170,7 @@
         .hero-btn {
             background: linear-gradient(90deg, var(--accent-color), #ff6b6b);
             color: white;
-            padding: 15px 35px;
+            padding: 12px 30px;
             border-radius: 50px;
             font-weight: 700;
             display: inline-flex;
@@ -232,6 +239,7 @@
             font-weight: 700;
             color: var(--dark-color);
             line-height: 1.4;
+            min-height: 66px;
         }
         
         .article-link {
@@ -446,20 +454,21 @@
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
             margin-top: 30px;
         }
         
         .social-icon {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background: white;
             color: var(--secondary-color);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             transition: var(--transition);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
@@ -511,16 +520,51 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
+        /* زر العودة للأعلى */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
         /* تحسينات للجوال */
         @media (max-width: 992px) {
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             
             .nav-link {
                 padding: 0.8rem 1rem !important;
                 margin: 2px 0;
                 text-align: center;
+            }
+            
+            .section-padding {
+                padding: 70px 0;
             }
         }
         
@@ -548,11 +592,11 @@
             }
             
             .hero {
-                padding: 100px 0;
+                padding: 90px 0;
             }
             
             .hero h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .hero p {
@@ -560,11 +604,24 @@
             }
             
             .section-padding {
-                padding: 70px 0;
+                padding: 60px 0;
             }
             
             .social-icons {
-                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
             }
         }
         
@@ -579,6 +636,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* تحسينات إضافية للأداء */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
     </style>
 </head>
 <body>
@@ -589,16 +657,16 @@
                 <p>أستاذ محاضر قسم أ - جامعة وهران 2 محمد بن أحمد</p>
             </div>
             <nav>
-                <ul id="nav-links" class="d-flex list-unstyled mb-0">
+                <ul id="nav-links" class="list-unstyled mb-0 d-flex">
                     <li><a href="#about" class="nav-link active">عن الأستاذ</a></li>
                     <li><a href="#articles" class="nav-link">المقالات</a></li>
                     <li><a href="#interventions" class="nav-link">المداخلات</a></li>
                     <li><a href="#cv" class="nav-link">السيرة الذاتية</a></li>
                     <li><a href="#social" class="nav-link">التواصل</a></li>
                 </ul>
-                <div class="burger-menu text-white" onclick="toggleMenu()">
+                <button class="burger-menu" onclick="toggleMenu()" aria-label="قائمة التنقل">
                     <span><i class="fas fa-bars"></i></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
@@ -629,7 +697,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">طرق الطعن على ضوء اتفاقية روما</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/399/8/1/253927" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/399/8/1/253927" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -639,7 +707,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">الوساطة الجزائية آلية تصالحية بين إرادة المشرع وعزوف الضحية أو المشتكى منه</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/268/5/1/48658" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/268/5/1/48658" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -649,7 +717,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">تعدد سبل الإحالة أمام المحكمة الجنائية الدولية والعقبات التي تعترضها</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/270/14/3/110771" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/270/14/3/110771" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -659,7 +727,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">التعويض عن الخطأ القضائي على ضوء اتفاقية روما</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/325/8/1/102044" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/325/8/1/102044" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -669,7 +737,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">Aspects Of Legal And Practical ShortComings In The Election Of Judges Of The International Criminal Court</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/457/4/2/107116" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/457/4/2/107116" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -679,7 +747,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">The role of civil society organizations in evaluating and estimation educational and training curricula</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/120/13/2/151492" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/120/13/2/151492" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -689,7 +757,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">المحامي المعتمد لدى المحكمة الجنائية الدولية ودوره في إرساء العدالة الجنائية الدولية</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/535/8/2/240207" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/535/8/2/240207" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -699,7 +767,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">قصور القضاء الدولي في مساءلة الكيان الإسرائيلي ومجرميه على جريمة الإبادة الجماعية المرتكبة في قطاع غزة</h3>
-                            <a href="https://asjp.cerist.dz/en/downArticle/526/9/1/245725" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/downArticle/526/9/1/245725" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -709,7 +777,7 @@
                     <div class="article-card">
                         <div class="article-content">
                             <h3 class="article-title">دفوع الكيان الإسرائيلي أمام المحكمة الجنائية الدولية على خلفية مذكرة توقيف بعض القادة الإسرائيليين بين الرفض والقبول</h3>
-                            <a href="https://asjp.cerist.dz/en/article/271175" target="_blank" class="article-link">
+                            <a href="https://asjp.cerist.dz/en/article/271175" target="_blank" rel="noopener" class="article-link">
                                 <i class="fas fa-external-link-alt"></i> عرض المقال
                             </a>
                         </div>
@@ -727,7 +795,7 @@
                 <button class="filter-btn active" data-filter="all">جميع المداخلات</button>
                 <button class="filter-btn" data-filter="international">المؤتمرات الدولية</button>
                 <button class="filter-btn" data-filter="national">المؤتمرات الوطنية</button>
-                <button class="filter-btn" data-filter="workshop"> الندوات وورش العمل</button>
+                <button class="filter-btn" data-filter="workshop">الندوات وورش العمل</button>
             </div>
             
             <div class="row">
@@ -762,7 +830,7 @@
                             </div>
                         </div>
                         <div class="intervention-footer">
-                            <a href="المنظمات غير الحكومية آلية لمكافحة الإفلات من العقاب.pdf" target="_blank" class="intervention-link">
+                            <a href="المنظمات غير الحكومية آلية لمكافحة الإفلات من العقاب.pdf" target="_blank" rel="noopener" class="intervention-link">
                                 <i class="fas fa-download"></i> تحميل المداخلة
                             </a>
                         </div>
@@ -800,7 +868,7 @@
                             </div>
                         </div>
                         <div class="intervention-footer">
-                            <a href="سلطة المحكمة الجنائية الدولية.pdf" target="_blank" class="intervention-link">
+                            <a href="سلطة المحكمة الجنائية الدولية.pdf" target="_blank" rel="noopener" class="intervention-link">
                                 <i class="fas fa-download"></i> تحميل المداخلة
                             </a>
                         </div>
@@ -838,20 +906,126 @@
                             </div>
                         </div>
                         <div class="intervention-footer">
-                            <a href="عجز المنظمات الإفريقية عن تحقيق التكامل الاقتصادي.pdf" target="_blank" class="intervention-link">
+                            <a href="عجز المنظمات الإفريقية عن تحقيق التكامل الاقتصادي.pdf" target="_blank" rel="noopener" class="intervention-link">
                                 <i class="fas fa-download"></i> تحميل المداخلة
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- يمكن إضافة المزيد من البطاقات هنا -->
-                <!-- سيتم عرض باقي المداخلات بنفس الطريقة -->
+                <!-- مداخلة 4 -->
+                <div class="col-md-6 col-lg-4 mb-4 reveal" data-category="national">
+                    <div class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-number">4</div>
+                            <h3 class="intervention-title">دور المحكمة الجنائية الدولية في تحقيق العدالة الدولية</h3>
+                        </div>
+                        <div class="intervention-body">
+                            <div class="intervention-detail">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">نوع الفعالية</div>
+                                    <div>ملتقى وطني: العدالة الجنائية الدولية بين النظرية والتطبيق</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="far fa-calendar-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">تاريخ الانعقاد</div>
+                                    <div>15-16 نوفمبر 2016</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">مكان الانعقاد</div>
+                                    <div>جامعة وهران 2 محمد بن أحمد</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="intervention-footer">
+                            <a href="دور المحكمة الجنائية الدولية في تحقيق العدالة الدولية.pdf" target="_blank" rel="noopener" class="intervention-link">
+                                <i class="fas fa-download"></i> تحميل المداخلة
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
-            </div>
-            
-            <div class="text-center mt-5 reveal">
-                <a href="#" class="btn btn-primary btn-lg">عرض جميع المداخلات</a>
+                <!-- مداخلة 5 -->
+                <div class="col-md-6 col-lg-4 mb-4 reveal" data-category="workshop">
+                    <div class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-number">5</div>
+                            <h3 class="intervention-title">الوساطة الجزائية كآلية تصالحية</h3>
+                        </div>
+                        <div class="intervention-body">
+                            <div class="intervention-detail">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">نوع الفعالية</div>
+                                    <div>ورشة عمل: الوساطة الجزائية كآلية تصالحية</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="far fa-calendar-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">تاريخ الانعقاد</div>
+                                    <div>27 ديسمبر 2016</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">مكان الانعقاد</div>
+                                    <div>جامعة وهران 2 محمد بن أحمد</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="intervention-footer">
+                            <a href="الوساطة الجزائية كآلية تصالحية.pdf" target="_blank" rel="noopener" class="intervention-link">
+                                <i class="fas fa-download"></i> تحميل المداخلة
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مداخلة 6 -->
+                <div class="col-md-6 col-lg-4 mb-4 reveal" data-category="international">
+                    <div class="intervention-card">
+                        <div class="intervention-header">
+                            <div class="intervention-number">6</div>
+                            <h3 class="intervention-title">The role of civil society organizations in evaluating and estimation educational and training curricula</h3>
+                        </div>
+                        <div class="intervention-body">
+                            <div class="intervention-detail">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">نوع الفعالية</div>
+                                    <div>المؤتمر الدولي: التعليم والتدريب في القرن 21</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="far fa-calendar-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">تاريخ الانعقاد</div>
+                                    <div>24-25 أكتوبر 2017</div>
+                                </div>
+                            </div>
+                            <div class="intervention-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="intervention-detail-content">
+                                    <div class="intervention-detail-label">مكان الانعقاد</div>
+                                    <div>جامعة باتنة 1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="intervention-footer">
+                            <a href="The role of civil society organizations.pdf" target="_blank" rel="noopener" class="intervention-link">
+                                <i class="fas fa-download"></i> تحميل المداخلة
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -860,8 +1034,10 @@
         <div class="container">
             <h2 class="section-title reveal">السيرة الذاتية</h2>
             <div class="cv-box reveal">
-                <p>تصفح السيرة الذاتية للأستاذ عبد القادر للاطلاع على المسار الأكاديمي والمساهمات البحثية والخبرات التدريسية والأنشطة العلمية المختلفة.</p>
-                <a href="cv.docx" class="cv-btn"><i class="fas fa-download"></i> تحميل السيرة الذاتية</a>
+                <p>تحتوي السيرة الذاتية للأستاذ عبد القادر على معلومات شاملة حول مؤهلاته العلمية، خبراته الأكاديمية، الأبحاث المنشورة، المشاركات في المؤتمرات والندوات، بالإضافة إلى الأنشطة العلمية والمهنية الأخرى.</p>
+                <a href="السيرة الذاتية.pdf" target="_blank" rel="noopener" class="cv-btn">
+                    <i class="fas fa-download me-2"></i> تحميل السيرة الذاتية
+                </a>
             </div>
         </div>
     </section>
@@ -869,25 +1045,32 @@
     <section id="social" class="section-padding social-section">
         <div class="container">
             <h2 class="section-title reveal">وسائل التواصل</h2>
-            <p class="text-center reveal">يمكنكم التواصل مع الأستاذ عبد القادر عبر الوسائل التالية</p>
+            <p class="text-center mb-5 reveal">يمكنكم التواصل مع الأستاذ عبد القادر عبر الوسائل التالية:</p>
             
             <div class="social-icons reveal">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-researchgate"></i></a>
-                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-            </div>
-            
-            <div class="mt-5 text-center reveal">
-                <p>للتواصل المباشر:</p>
-                <p><i class="fas fa-envelope me-2"></i> email@example.com</p>
-                <p><i class="fas fa-phone me-2"></i> +213 XXX XXX XXX</p>
+                <a href="mailto:example@univ-oran2.dz" class="social-icon" aria-label="البريد الإلكتروني">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+213123456789" class="social-icon" aria-label="رقم الهاتف">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="فيسبوك">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="لينكد إن">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="إنستغرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-4">
+    <footer>
         <div class="container">
             <div class="footer-links">
                 <a href="#about" class="footer-link">عن الأستاذ</a>
@@ -896,15 +1079,19 @@
                 <a href="#cv" class="footer-link">السيرة الذاتية</a>
                 <a href="#social" class="footer-link">التواصل</a>
             </div>
-            
             <div class="copyright">
-                <p class="text-center mb-0">&copy; 2025 موقع الأستاذ عبد القادر - جامعة وهران 2 محمد بن أحمد. جميع الحقوق محفوظة.</p>
+                <p>جميع الحقوق محفوظة © 2023 موقع الأستاذ عبد القادر - جامعة وهران 2 محمد بن أحمد</p>
             </div>
         </div>
     </footer>
 
+    <a href="#" class="back-to-top" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // وظيفة القائمة المتحركة
+        // وظيفة للتحكم في القائمة على الجوال
         function toggleMenu() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('show');
@@ -920,83 +1107,86 @@
             });
         });
         
-        // تأثيرات التمرير
+        // إضافة تأثير التمرير للعناصر
         function revealElements() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            for (let i = 0; i < reveals.length; i++) {
+            const elements = document.querySelectorAll('.reveal');
+            elements.forEach(element => {
                 const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
                 
                 if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-        
-        // تفعيل تأثيرات التمرير عند التحميل والتمرير
-        window.addEventListener('scroll', revealElements);
-        window.addEventListener('load', revealElements);
-        
-        // إضافة كلاس active للروابط عند التمرير
-        const sections = document.querySelectorAll('section[id]');
-        
-        function scrollActive() {
-            const scrollY = window.pageYOffset;
-            
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector('.nav-link[href*=' + sectionId + ']').classList.add('active');
-                } else {
-                    document.querySelector('.nav-link[href*=' + sectionId + ']').classList.remove('active');
+                    element.classList.add('active');
                 }
             });
         }
         
-        window.addEventListener('scroll', scrollActive);
+        window.addEventListener('scroll', revealElements);
+        window.addEventListener('load', revealElements);
         
-        // تأثير التمرير على الهيدر
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+        // إظهار وإخفاء زر العودة للأعلى
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // تأثير التصغير للهيدر عند التمرير
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
         
-        // تصفية المداخلات
-        const filterBtns = document.querySelectorAll('.filter-btn');
+        // فلترة المداخلات
+        const filterButtons = document.querySelectorAll('.filter-btn');
         const interventionCards = document.querySelectorAll('.intervention-card');
         
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
                 // إزالة النشاط من جميع الأزرار
-                filterBtns.forEach(b => b.classList.remove('active'));
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
                 // إضافة النشاط للزر المحدد
-                btn.classList.add('active');
+                button.classList.add('active');
                 
-                const filterValue = btn.getAttribute('data-filter');
+                // الحصول على قيمة الفلتر
+                const filterValue = button.getAttribute('data-filter');
                 
+                // تطبيق الفلتر
                 interventionCards.forEach(card => {
-                    if (filterValue === 'all') {
-                        card.style.display = 'flex';
+                    const cardCategory = card.parentElement.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === cardCategory) {
+                        card.parentElement.style.display = 'block';
                     } else {
-                        if (card.getAttribute('data-category') === filterValue) {
-                            card.style.display = 'flex';
-                        } else {
-                            card.style.display = 'none';
-                        }
+                        card.parentElement.style.display = 'none';
                     }
                 });
             });
         });
+        
+        // تهيئة الصفحة عند التحميل
+        window.addEventListener('load', () => {
+            // إضافة تأثير التحميل للصفحة
+            document.body.classList.add('loaded');
+            
+            // تفعيل تأثيرات التمرير
+            revealElements();
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
